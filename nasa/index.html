@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>EVERYTHING STARTS WITH WATER</title>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script>
+        AFRAME.registerComponent('rotate', {
+            init: function () {
+                this.el.setAttribute('animation', {
+                    property: 'rotation',
+                    to: '0 360 0',
+                    dur: 10000,
+                    loop: true,
+                    easing: 'linear'
+                });
+            }
+        });
+    </script>
+    <style>
+        /* CSS for the A-Frame scene container */
+        #aframe-container {
+            position: absolute;
+            width: 100%;
+            height: 100vh;
+            top: 56px; /* Adjust this value based on your navbar height */
+            left: 0;
+            z-index: 0; /* Ensure the A-Frame scene is behind the navbar */
+        }
+
+        /* CSS for the Bootstrap Navbar */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1; /* Ensure the navbar is on top of other elements */
+            background-color: transparent; /* Make the navbar background transparent */
+        }
+
+        /* Style to align navbar links to the right */
+        .navbar-nav {
+            margin-left: auto;
+        }
+
+        /* Style to remove underlines from navbar links */
+        .navbar-nav .nav-link {
+            text-decoration: none;
+        }
+    </style>
+    
+    <!-- Link to Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <!-- Bootstrap Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: transparent;">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                <img src="imgs/logo.png" alt="Your Logo">
+            </a>
+            
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+            >
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto"> <!-- Align navbar links to the right -->
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="html/visual.html">Visual Tool</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="html/about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="html/researches.html">Researches</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- A-Frame Scene Container -->
+    <div id="aframe-container">
+        <a-scene>
+            <!-- A-Frame elements -->
+            <a-camera position='0 0 3' user-height='0'></a-camera>
+            <a-sphere
+                src="https://raw.githubusercontent.com/aframevr/sample-assets/master/assets/images/space/earth_atmos_4096.jpg"
+                radius="1.5"
+                segments-height="53"
+                rotate
+            ></a-sphere>
+            <a-sky segments-height="100" segments-width="100" src="https://1.bp.blogspot.com/-4CHlBxsvQ_0/UrxJVGBY_tI/AAAAAAAAAWo/OK14DV9oCaQ/s1600/Christmas+Sky+Full+Of+Stars.jpg" color="#555" rotation="0 -90 0"></a-sky>
+        </a-scene>
+    </div>
+
+    <!-- Link to Bootstrap JavaScript (jQuery and Popper.js are required dependencies) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
