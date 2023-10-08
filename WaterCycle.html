@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EVERYTHING STARTS WITH WATER</title>
+    <style>
+        /* CSS for the Bootstrap Navbar */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1; /* Ensure the navbar is on top of other elements */
+            background-color: #333; /* Set the background color of the navbar to gray */
+        }
+
+        /* Style to remove underlines from navbar links */
+        .navbar-nav .nav-link {
+            text-decoration: none;
+        }
+
+        /* CSS for the video background */
+        body {
+            margin: 0;
+            overflow: hidden;
+        }
+        #content {
+            margin-top: 20px;
+            margin-left: 10px;
+            flex: 1; /* Allow content to expand to fill remaining space */
+            padding: 20px; /* Add some padding to the content */
+            width: 60%;
+        }
+        #video-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%; /* Set the video width to 100% */
+            height: 50vh; /* Set the video height to half of the viewport height */
+            z-index: -1; /* Place the video behind other content */
+        }
+
+        video {
+            margin-top: 85px;
+            width: 165%;
+            height: 190%;
+            opacity: 1; /* Adjust the video opacity as desired */
+        }
+
+        /* Adjust other styles for your content as needed */
+    </style>
+
+    <!-- Link to Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <!-- Bootstrap Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                <img src="imgs/logo.png" alt="Your Logo">
+            </a>
+            
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+            >
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto"> <!-- Align navbar links to the right -->
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="WaterCycle.html">Water Cycle</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="visual.html">Visual Tool</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="researches.html">Researches</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Video Background -->
+    <div id="content">
+        <h1>Everything Starts with Water</h1>
+        <p>Climate change is a long-term change in the average weather patterns that have come to define Earth’s local, regional and global climates. These changes have a broad range of observed effects that are synonymous with the term.</p>
+        <p>Changes observed in Earth’s climate since the mid-20th century are driven by human activities, particularly fossil fuel burning, which increases heat-trapping greenhouse gas levels in Earth’s atmosphere, raising Earth’s average surface temperature. Natural processes, which have been overwhelmed by human activities, can also contribute to climate change, including internal variability (e.g., cyclical ocean patterns like El Niño, La Niña and the Pacific Decadal Oscillation) and external forcings (e.g., volcanic activity, changes in the Sun’s energy output, variations in Earth’s orbit).
+        </p>
+        <p>Scientists use observations from the ground, air, and space, along with computer models, to monitor and study past, present, and future climate change. Climate data records provide evidence of climate change key indicators, such as global land and ocean temperature increases; rising sea levels; ice loss at Earth’s poles and in mountain glaciers; frequency and severity changes in extreme weather such as hurricanes, heatwaves, wildfires, droughts, floods, and precipitation; and cloud and vegetation cover changes.
+        </p>
+        <p>“Climate change” and “global warming” are often used interchangeably but have distinct meanings. Similarly, the terms "weather" and "climate" are sometimes confused, though they refer to events with broadly different spatial- and timescales.</p>
+
+    </div>
+    <div id="video-container">
+        <video autoplay loop muted>
+            <source src="videos/water-cycle.mp4" type="video/mp4">
+            <!-- Add additional source elements for different video formats (e.g., WebM, Ogg) -->
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+    <!-- Your content goes here -->
+
+    <!-- Include your scripts, including Bootstrap and other JavaScript libraries, here -->
+</body>
+</html>
